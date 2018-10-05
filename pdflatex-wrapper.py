@@ -81,9 +81,5 @@ os.chdir(source_directory)
 if os.path.exists(final_pdf_path):
     print("Generated {}".format(pdf_name))
 
-    # Open the pdf if on macOS.
-    if platform.system() == 'Darwin':
-        subprocess.call("open $(pwd)/{}".format(pdf_name), shell=True)
-
 
 
