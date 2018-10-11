@@ -80,6 +80,6 @@ os.chdir(source_directory)
 # Make sure the pdf was moved back to the current directory.
 if os.path.exists(final_pdf_path):
     print("Generated {}".format(pdf_name))
-
-
+    if 'Darwin' in platform.system():
+        subprocess.call(['open','-a','Preview',final_pdf_path])
 
